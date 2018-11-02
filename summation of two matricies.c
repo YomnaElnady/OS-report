@@ -11,8 +11,8 @@ int B [M][N] = {{6, 5, 5},{6, 6, 8},{0, 3, 5}};
 int C [M][N];
 
 struct v {
-   int i; /* row */
-   int j; /* column */
+   int i; //row
+   int j; //column
 };
 
 void *summation(void *argument);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[]) {
          data->i = i;
          data->j = j;
          /* Now create the thread passing it data as a parameter */
-         pthread_t threads[NUM_THREADS];       //Thread ID
+         pthread_t threads[NUM_THREADS];       //Thread IDs
          //Create the thread
          pthread_create(&threads[count],NULL,summation,data);
          count++;
